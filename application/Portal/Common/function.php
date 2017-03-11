@@ -36,10 +36,9 @@ function sp_sql_posts($tag,$where=array()){
 
 
 	$join = "".C('DB_PREFIX').'posts as b on a.object_id =b.id';
-	$join2= "".C('DB_PREFIX').'users as c on b.post_author = c.id';
 	$rs= M("TermRelationships");
 
-	$posts=$rs->alias("a")->join($join)->join($join2)->field($field)->where($where)->order($order)->limit($limit)->select();
+	$posts=$rs->alias("a")->join($join)->field($field)->where($where)->order($order)->limit($limit)->select();
 	return $posts;
 }
 
@@ -105,9 +104,8 @@ function sp_sql_posts_paged($tag,$pagesize=20,$pagetpl='{first}{prev}{liststart}
 	}
 
 	$join = "".C('DB_PREFIX').'posts as b on a.object_id =b.id';
-	$join2= "".C('DB_PREFIX').'users as c on b.post_author = c.id';
 	$rs= M("TermRelationships");
-	$totalsize=$rs->alias("a")->join($join)->join($join2)->field($field)->where($where)->count();
+	$totalsize=$rs->alias("a")->join($join)->field($field)->where($where)->count();
 	
 	import('Page');
 	if ($pagesize == 0) {
@@ -117,9 +115,59 @@ function sp_sql_posts_paged($tag,$pagesize=20,$pagetpl='{first}{prev}{liststart}
 	$page = new Page($totalsize,$pagesize);
 	$page->setLinkWraper("li");
 	$page->__set("PageParam", $PageParam);
-	$page->SetPager('default', $pagetpl, array("listlong" => "10", "first" => "Casa", "last" => "último", "prev" => "anterior", "next" => "Next", "list" => "*", "disabledclass" => ""));
+	$page->SetPager('default', $pagetpl, array("listlong" => "6", "first" => "首页", "last" => "尾页", "prev" => "上一页", "next" => "下一页", "list" => "*", "disabledclass" => ""));
 	$posts=$rs->alias("a")->join($join)->join($join2)->field($field)->where($where)->order($order)->limit($page->firstRow . ',' . $page->listRows)->select();
 
+	$content['posts']=$posts;
+	$content['page']=$page->show('default');
+	return $content;
+}
+/**
+ * 功能：根据关键字 搜索文章（包含子分类中文章），已经分页，调用方式同sp_sql_posts_paged
+ * create by WelkinVan 2014-12-04
+ * param string $keyword 关键字.
+ * param string $tag 以字符串方式传入,例："order:post_date desc,listorder desc;"
+ * 		field:调用post指定字段,如(id,post_title...) 默认全部
+ * 		limit:数据条数,默认值为10,可以指定从第几条开始,如3,8(表示共调用8条,从第3条开始)
+ * 		order:推荐方式(post_date) (desc/asc/rand())
+ * param int $pagesize 分页数字.
+ * param string $pagetpl 以字符串方式传入,例："{first}{prev}{liststart}{list}{listend}{next}{last}"
+ */
+function sp_sql_posts_paged_bykeyword($keyword,$tag,$pagesize=20,$pagetpl='{first}{prev}{liststart}{list}{listend}{next}{last}'){
+	$where=array();
+	$tag=sp_param_lable($tag);
+	$field = !empty($tag['field']) ? $tag['field'] : '*';
+	$limit = !empty($tag['limit']) ? $tag['limit'] : '';
+	$order = !empty($tag['order']) ? $tag['order'] : 'post_date';
+
+
+	//根据参数生成查询条件
+	$where['status'] = array('eq',1);
+	$where['post_status'] = array('eq',1);
+	$where['post_title'] = array('like','%' . $keyword . '%');
+	
+	if (isset($tag['cid'])) {
+		$where['term_id'] = array('in',$tag['cid']);
+	}
+
+	if (isset($tag['ids'])) {
+		$where['object_id'] = array('in',$tag['ids']);
+	}
+
+	$join = "".C('DB_PREFIX').'posts as b on a.object_id =b.id';
+	$rs= M("TermRelationships");
+	$totalsize=$rs->alias("a")->join($join)->field($field)->where($where)->count();
+	import('Page');
+	if ($pagesize == 0) {
+		$pagesize = 20;
+	}
+	$PageParam = C("VAR_PAGE");
+	$page = new Page($totalsize,$pagesize);
+	$page->setLinkWraper("li");
+	$page->__set("PageParam", $PageParam);
+	$page->SetPager('default', $pagetpl, array("listlong" => "6", "first" => "首页", "last" => "尾页", "prev" => "上一页", "next" => "下一页", "list" => "*", "disabledclass" => ""));
+	$posts=$rs->alias("a")->join($join)->join($join2)->field($field)->where($where)->order($order)->limit($page->firstRow . ',' . $page->listRows)->select();
+	$content['count']=$totalsize;
 	$content['posts']=$posts;
 	$content['page']=$page->show('default');
 	return $content;
@@ -178,10 +226,9 @@ function sp_sql_post($tid,$tag){
 
 
 	$join = "".C('DB_PREFIX').'posts as b on a.object_id =b.id';
-	$join2= "".C('DB_PREFIX').'users as c on b.post_author = c.id';
 	$rs= M("TermRelationships");
 
-	$posts=$rs->alias("a")->join($join)->join($join2)->field($field)->where($where)->find();
+	$posts=$rs->alias("a")->join($join)->field($field)->where($where)->find();
 	return $posts;
 }
 
