@@ -1,0 +1,66 @@
+@charset "utf-8";
+/*本网站由web前端开发者(薛洪刚)开发;IT昵称(小贱);QQ(1399395438)*/
+/* CSS Document */
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,form,img,dl,dt,dd,table,th,td,blockquote,fieldset,div,strong,label,em{margin:0;padding:0;border:0;}
+ul,ol,li{list-style:none;}
+input,button{margin:0;font-size:14px;vertical-align:middle;}
+body{font-size:14px;font-family:Arial, Helvetica, sans-serif;margin:0 auto; font-family:"Arial";}
+table{border-collapse:collapse;border-spacing:0;}
+b,em,i{ font-style:normal; font-weight:normal;}
+h1,h2,h3{ font-size:14px;}
+h4{font-weight:normal; font-size:14px;}
+h5{ font-size:14px;}
+h6{ font-size:14px;font-weight:normal;}
+a:link{ color:#000; text-decoration:none;}
+a:hover{  color:#ff00;  text-decoration:underline;}
+a:visited{ color:#000; text-decoration:none;}
+
+/*header banner start */
+#headerbannerbg{ width:960px; height:260px; margin:0 auto ;overflow:hidden;}
+#headerbannerbg span{width:960px; height:80px;}
+#headerbannerbg ul li{float:left; margin-left:6px;}
+.headermemberbg{width:960px; height:auto; margin:0 auto; overflow:hidden;}
+.headermemberbg ul{width:960px; height:100px; margin-top:5px;}
+.headermemberbg ul li{width:152px; height:100px; float:left; margin-left:5px;
+	border-right:#efeaea 2px dotted;}
+.headermemberbg ul li img{float:left;}
+.firstmbg{border-left:#efeaea 2px dotted; }
+
+/*header nav start */
+#navbg{background:url(../images/navbg1.jpg) repeat-x; height:34px;}
+#navbg ul{width:960px; height:34px; margin:0 auto; overflow:hidden; line-height:34px;}
+#navbg ul li{margin: 0 21px; float:left; font-size:14px; text-align:center;}
+#navbg ul li:hover{background:url(../images/navbg2.jpg) repeat-x; margin: 0 21px; height:34px;}
+/*main start */
+#mainbg{width:960px;margin:5px auto; overflow:hidden;}
+.leftmainbg{ width:660px; float:left; overflow:hidden;}
+.leftvideobg{width:660px; height:470px; overflow:hidden;}
+.leftvideobg ul li{width:660px; height:395px;}
+.leftvideobg ul div{background:#ebecec;width:660px; height:75px; word-break:break-all; font-size:230%;}
+.leftmemberbg{width:660px;overflow:hidden; margin-top:5px;}
+.leftmemberbg ul{width:200px; height:95px; float:left;margin: 5px 10px;}
+.leftmemberbg ul li{width:90px; height:95px;float:left;}
+.leftmemberbg ul div{width:110px; height:auto;#margin-left:90px;#margin-top:-90px;
+	word-break:break-all; overflow:hidden;}
+.leftnewsbg{width:660px; margin-top:5px; }
+.leftnewsbg ul{ width:320px; height:250px; float:left; margin-right:10px;}
+.leftnewsbg ul li{width:320px; height:215px;}
+.leftnewsbg ul div{width:320px; height:35px; word-break:break-all; overflow:hidden;}
+.leftbannerbg{width:660px; margin-top:10px;}
+.rightnewsbg{ width:300px; float:left;overflow:hidden;}
+.rightbannerbg{width:300px;}
+.rightbannerbg li{padding-left:20px;}
+.righthdnewsbg{width:300px;}
+.fristsidenavbg{background:#0094d7; width:280px; height:30px; margin-left:20px; margin-top:5px;
+                line-height:30px; font-size: 16px;}
+.righthdnewsbg ul{width:280px; height:70px; margin-left:20px; margin-top:9px;}
+.righthdnewsbg ul li {width:90px; height:70px;float:left;}
+.righthdnewsbg ul div{width:180px; height:70px;float:left; word-break:break-all; overflow:hidden; 
+	                  line-height:18px;}
+.righthdhotbg{width:280px; margin-left:20px;}
+.rightsubnavbg{background:#0094d7; width:280px; height:30px; margin-top:5px;line-height:30px; font-size:16px;}
+.righthdhotbg ul{background:#ebecec;width:280px; height:45px; margin-top:9px; border-bottom:#d0d1d2 4px solid;}	
+.righthdhotbg ul li{width:280px; height:45px; word-break:break-all; overflow:hidden; line-height:15px;}
+ .righthdhotbg ul li:hover{background:#fff;width:280px; height:85px;}
+
+#friendlinkbg{background:#0289cb; height:200px;}

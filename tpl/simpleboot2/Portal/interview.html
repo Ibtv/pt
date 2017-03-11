@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>{$site_name}</title>
+    <meta http-equiv="Content-Language" content="pt_PT">
+    <meta name="author" content="Powerless"> 
+    <meta name="Copyright" content="{$site_seo_title}">
+	<meta name="keywords" content="{$site_seo_keywords}" />
+	<meta name="description" content="{$site_seo_description}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+<link rel="icon" href="__TMPL__Public/images/favicon.ico" type="image/ico">
+<link href="__TMPL__Public/style/index.css" rel="stylesheet" type="text/css">
+<link href="__TMPL__Public/style/base.css" rel="stylesheet" type="text/css">
+
+        <script type="text/javascript" language="javascript">  
+        function nofind(){
+        var img=event.srcElement;
+        img.src="__TMPL__Public/images/no-img.jpg";
+        img.onerror=null; 
+        }
+        </script>
+</head>
+
+<body class="preview" id="top" data-spy="scroll" data-target=".subnav"data-offset="80">
+<!--header nav start-->
+<div id="navbg">
+	<ul>
+       	   	   <li><a href="{:u('list/index',array('id'=>141))}">Tecnologia Hot</a></li>
+       	   	   <li><a href="{:u('list/index',array('id'=>142))}">IT</a></li>
+       	   	   <li><a href="{:u('list/index',array('id'=>143))}">Digital</a></li>
+       	   	   <li><a href="{:u('list/index',array('id'=>144))}">Inovação</a></li>
+       	   	   <li><a href="{:u('list/index',array('id'=>145))}">Energia e meio ambiente</a></li>
+	</ul>
+</div>
+<!--header nav end-->
+<!--main start-->
+<div id="mainbg">
+    <div class="leftmainbg">
+    	
+            <php>
+            $newd_all=sp_sql_posts('cid:141;field:tid,post_title,smeta;limit:1;order:post_date desc');
+            </php>
+            <foreach name="newd_all" item="all">
+            <php>
+            $smeta=json_decode($all['smeta'],true);
+            </php>
+            <div class="leftvideobg">
+                <ul>
+                   <li><a href="{:U('article/index',array('id'=>$all['tid']))}">
+                   <img onerror="nofind();" src="{$site_host}data/upload/{$smeta.thumb}" width="660" height="395"/>
+                   </a></li>
+                   <div><a href="{:U('article/index',array('id'=>$all['tid']))}">
+                   {$all.post_title}
+                   </a></div>
+                </ul>
+			</div>
+            </foreach>
+            
+            
+
+	   <div class="leftmemberbg">
+            <php>
+            $new_all=sp_sql_posts('cid:141;field:tid,post_title,smeta;limit:1,6;order:post_date desc');
+            </php>
+            <foreach name="new_all" item="all">
+            <php>
+            $smeta=json_decode($all['smeta'],true);
+            </php>
+            <ul>
+	   	    	<li><a href="{:U('article/index',array('id'=>$all['tid']))}">
+                <img onerror="nofind();" src="{$site_host}data/upload/{$smeta.thumb}" width="90" height="90" />
+                </a></li>
+                   <div>><a href="{:U('article/index',array('id'=>$all['tid']))}">
+                   {$all.post_title}
+                   </a></div>
+	   	    </ul>
+            </foreach>
+	   	    
+	   </div>
+	   
+	   <div class="leftnewsbg">
+            <php>
+            $kj_all=sp_sql_posts('cid:141,142,143,144,145;field:tid,post_title,smeta;limit:10;order:post_date desc');
+            </php>
+            <foreach name="kj_all" item="all">
+            <php>
+            $smeta=json_decode($all['smeta'],true);
+            </php>
+            <ul>
+	   	    	<li><a href="{:U('article/index',array('id'=>$all['tid']))}">
+                <img onerror="nofind();" src="{$site_host}data/upload/{$smeta.thumb}" width="320" height="215"/>
+                </a></li>
+                   <div>><a href="{:U('article/index',array('id'=>$all['tid']))}">
+                   {$all.post_title}
+                   </a></div>
+	   	    </ul>
+            </foreach>
+	   </div>
+	   
+	   <div class="leftbannerbg">
+       
+        <php>
+            $main_c=sp_getslide('main_c');
+        </php>
+        <foreach name="main_c" item="c"><php>break;</php></foreach>
+        <img onerror="nofind();"  onerror="nofind();" src="{$site_host}data/upload/{$c.slide_pic}" alt="{$c.slide_name}" width="660" height="136"/>
+        </div>
+	</div>
+	<div class="rightnewsbg">
+		<div class="rightbannerbg">
+			<ul>
+            
+            <php>
+            $tz_all=sp_sql_posts('cid:142;field:tid,smeta;limit:3;order:post_date desc');
+            </php>
+            <foreach name="tz_all" item="all">
+            <php>
+            $smeta=json_decode($all['smeta'],true);
+            </php>
+	   	    	<li><a href="{:U('article/index',array('id'=>$all['tid']))}">
+                <img onerror="nofind();" src="{$site_host}data/upload/{$smeta.thumb}" width="280" height="180"/>
+                </a></li>
+            </foreach>
+			</ul>
+		</div>
+		<div class="righthdnewsbg"> 
+            <div class="fristsidenavbg"><a href="{:u('list/index',array('id'=>142))}">IT</a></div>
+            <php>
+            $my_all=sp_sql_posts('cid:142;field:tid,post_title,smeta;limit:3,4;order:post_date desc');
+            </php>
+            <foreach name="my_all" item="all">
+            <php>
+            $smeta=json_decode($all['smeta'],true);
+            </php>
+			<ul>
+	   	    	<li><a href="{:U('article/index',array('id'=>$all['tid']))}">
+                <img onerror="nofind();" src="{$site_host}data/upload/{$smeta.thumb}" width="90" height="70" />
+                </a></li>
+                 <div>><a href="{:U('article/index',array('id'=>$all['tid']))}">
+                   {$all.post_title}
+                   </a></div>
+            </ul>
+            </foreach>
+		</div>
+        <div class="righthdhotbg">
+			<div class="rightsubnavbg"><a href="{:u('list/index',array('id'=>144))}">Inovação</a></div>
+			<php>
+            $yy_all=sp_sql_posts('cid:144;field:tid,post_title,smeta;limit:7;order:post_date desc');
+            </php>
+            <foreach name="yy_all" item="all">
+            <php>
+            $smeta=json_decode($all['smeta'],true);
+            </php>
+			<ul>
+	   	    	<li> > <a href="{:U('article/index',array('id'=>$all['tid']))}">
+                   {$all.post_title}
+                   </a></li>
+            </ul>
+            </foreach>
+		</div>
+		
+		<div class="righthdnewsbg"> 
+            <div class="fristsidenavbg"><a href="{:u('list/index',array('id'=>145))}">Energia e meio ambiente</a></div>
+			<php>
+            $ft_all=sp_sql_posts('cid:145;field:tid,post_title,smeta;limit:4;order:post_date desc');
+            </php>
+            <foreach name="ft_all" item="all">
+            <php>
+            $smeta=json_decode($all['smeta'],true);
+            </php>
+			<ul>
+	   	    	<li><a href="{:U('article/index',array('id'=>$all['tid']))}">
+                <img onerror="nofind();" src="{$site_host}data/upload/{$smeta.thumb}" width="90" height="70" />
+                </a></li>
+                 <div>><a href="{:U('article/index',array('id'=>$all['tid']))}">
+                   {$all.post_title}
+                   </a></div>
+            </ul>
+            </foreach>
+		</div>
+		<div class="righthdnewsbg"> 
+            <div class="fristsidenavbg"><a href="{:u('list/index',array('id'=>143))}">Digital</a></div>
+			<php>
+            $ft_all=sp_sql_posts('cid:143;field:tid,post_title,smeta;limit:4;order:post_date desc');
+            </php>
+            <foreach name="ft_all" item="all">
+            <php>
+            $smeta=json_decode($all['smeta'],true);
+            </php>
+			<ul>
+	   	    	<li><a href="{:U('article/index',array('id'=>$all['tid']))}">
+                <img onerror="nofind();" src="{$site_host}data/upload/{$smeta.thumb}" width="90" height="70" />
+                </a></li>
+                 <div>><a href="{:U('article/index',array('id'=>$all['tid']))}">
+                   {$all.post_title}
+                   </a></div>
+            </ul>
+            </foreach>
+		</div>
+        
+        
+        
+	</div>
+</div>
+
+
+
+<div class="bigad wrapper">
+
+        <php>
+            $main_b=sp_getslide('main_b');
+        </php>
+        <foreach name="main_b" item="b"><php>break;</php></foreach>
+        <img onerror="nofind();"  onerror="nofind();" src="{$site_host}data/upload/{$b.slide_pic}" alt="{$b.slide_name}" width="960" height="130"/>
+</div>
+
+
+		<include file="Public:footer" />
+</body>
+</html>
+

@@ -1,0 +1,64 @@
+@charset "utf-8";
+/*本网站由web前端开发者(薛洪刚)开发;IT昵称(小贱);QQ(1399395438)*/
+/* CSS Document */
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,form,img,dl,dt,dd,table,th,td,blockquote,fieldset,div,strong,label,em{margin:0;padding:0;border:0;}
+ul,ol,li{list-style:none;}
+input,button{margin:0;font-size:14px;vertical-align:middle;}
+body{font-size:14px;font-family:Arial, Helvetica, sans-serif;margin:0 auto; font-family:"Arial";}
+table{border-collapse:collapse;border-spacing:0;}
+b,em,i{ font-style:normal; font-weight:normal;}
+h1,h2,h3{ font-size:14px;}
+h4{font-weight:normal; font-size:14px;}
+h5{ font-size:14px;}
+h6{ font-size:14px;font-weight:normal;}
+a:link{ color:#000; text-decoration:none;}
+a:hover{  color:#ff00;  text-decoration:underline;}
+a:visited{ color:#000; text-decoration:none;}
+.wrapper{width:960px; margin:5px auto; overflow:hidden;}
+/* header nav start*/
+#headerlogobg{width:960px; height:; margin:0 auto; overflow:hidden;}
+.headnavbg{background:#1e63b0;}
+.headnavbg ul{width:960px; height:30px; margin:0 auto; overflow:hidden;}
+.headnavbg ul li{line-height:30px; font-size:20px; text-align:center; width:160px; height:30px; float:left;}
+.headnavbg a{ color:#fff; text-decoration:none;}
+.headnavbg a:hover{  color:#fff;  text-decoration:underline;}
+/* main start*/
+#slideBox {width:475px;height:300px;overflow:hidden;position:relative;float:left;}
+#slideBox ul#show_pic {margin:0;padding:0;list-style:none;height:300px;width:4750px;position:absolute;}
+#slideBox ul#show_pic li {float:left;margin:0;padding:0;height:285px;}
+#slideBox ul#show_pic li img {display:block;}
+#iconBall {position:absolute;bottom:0;right:0;}
+#iconBall li {float:left;color:#7a7a7a;width:32px;height:28px;line-height:28px;text-align:center;font-size:14px;
+	        font-weight:bold;}
+#iconBall li.active {background:url(../../../simpleboot/Public/images/iconbg.png) no-repeat;color:#fff;}
+#slideText {width:475px;height:28px;background:rgba(0, 0, 0, 0.7);color:#fff;position:absolute;left:0px;bottom:0px;
+           *background:transparent;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#b2000000, endColorstr=#b2000000);}
+#textBall {position:absolute;left:10px;bottom:3px;}
+#textBall li {float:left;cursor:pointer;display:none;color:#fff;font-size:14px; width:260px;height:28px; line-height:32px; overflow:hidden;}
+#textBall li.active {display:block;}
+#textBall li a {text-decoration:none;color:#fff;}
+.righthdtubg{width:485px; height:300px; float:left; overflow:hidden;}
+.righthdtubg ul{width:485px; height:300px;}
+.righthdtubg ul li{width:155px; height:142px; border:#f3f3f3 1px solid; float:left; text-align:center; 
+	               margin-left:3px; margin-top:3px;}
+.sidenavbg{border-top:#4384c4 3px solid; background:#f3f3f3;width:960px;line-height:50px; font-size:20px; height:50px; margin:5px auto; #margin:10px auto;overflow:hidden;}
+.memberbg{width:960px; margin:0 auto; overflow:hidden;}
+.memberbg ul{width:960px; }
+.memberbg ul li{width:150px; height:100px; float:left;margin-top:4px; margin-left:9px;}
+#mainnewsbg{width:960px; margin:0 auto;overflow:hidden;}
+#mainnewsbg ul{width:150px; height:120px; border:#cacaca 1px solid; float:left; margin-left:8px; margin-top:5px;}
+#mainnewsbg ul li{width:150px; height:100px;}
+#mainnewsbg ul div{background:#f3f3f3;width:150px; height:20px; line-height:20px; overflow:hidden; text-align:center;}
+.mainhotbg{width:960px; margin:0 auto; overflow:hidden;}
+.lefthotbg{width:660px; float:left;}
+.lefthotbg ul{width:320px; height:80px; float:left; margin-top:10px;}
+.lefthotbg ul div{width:140px; height:80px; float:left;}
+.lefthotbg ul li{float:left; width:170px; height:80px; padding-left:10px; overflow:hidden; word-break:break-all;}
+.rightnewhotbg{width:300px; float:left;}
+.rightnewhotbg ul li{width:300px; height:80px; overflow:hidden; margin-top:10px;word-break:break-all; line-height:20px;}
+.bannerbg{width:960px; height:90px; margin:5px auto; overflow:hidden;}
+/* friendlink start*/
+#friendlinkbg{background:#f8f8f8;width:960px; height:150px; margin:5px auto; overflow:hidden;}
+
+
+

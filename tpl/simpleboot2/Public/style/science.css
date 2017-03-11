@@ -1,0 +1,118 @@
+/*本网站由web前端开发者(薛洪刚)开发;IT昵称(小贱);QQ(1399395438)*/
+/**Doucument css**/
+body{margin:0px; padding:0px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#666;}
+h1 h2 h3 h4 img ul li dl dd dt{list-style:none; border:0px; margin:0px; padding:0px;}
+a:link{ color:#000;text-decoration:none;}
+a:hover{color:#09F;text-decoration:none;}
+
+/**banner start**/
+#banner{height:95px; width:960px;margin:0 auto; padding:0px;}
+.banner_left{height:95px; width:750px;float:left; list-style:none;}
+.banner_right{height:95px; width:200px; float:left; list-style:none; margin-left:10px;}
+/** nav start**/
+#nav{ background:url(../img/navBG.png) repeat-x; height:60px; width:960px; margin:0 auto; padding:0PX;}
+#nav ul{width:960px; font-size:22px;list-style:none; margin-top:5px; margin-bottom:0px; padding:0px; margin-left:0px;}
+#nav ul li{float:left; padding:17px 33px;}
+
+/**top**/
+#top{width:960px; height:270px; margin:0 auto; padding-top:5px;}
+/**gundong start**/
+#zSlider{margin:0px;width:720px; height:270px; overflow:hidden; float:left;}
+#picshow{position:relative;}
+#picshow,#picshow_img{width:550px; height:270px; overflow:hidden; float:left;}
+#picshow_img ul{ padding:0px; margin:0px;}
+#picshow_img li{width:550px; height:270px; overflow:hidden; float:left; display:none; list-style:none; padding:0px; margin:0px;}
+#picshow_img img{width:550px; height:px;}
+#picshow_tx{left:0px; width:550px; bottom:0px; position:absolute; height:90px; overflow:hidden;}
+#picshow_tx ul{margin:0px; padding:0px;}
+#picshow_tx li{background:url(../img/picshow_bg.png) repeat; padding:10px 30px; height:70px; color:#fff; display:none;}
+#picshow_tx li a{color:#fff;}
+#picshow_tx li a:hover{text-decoration:underline;}
+#picshow_tx li h3{ margin:13px 0;}
+#picshow_tx li p{ color:#ccc; line-height:16px; height:70px; overflow:hidden;}
+#select_btn{width:170px; height:270px; color:#111; float:right; display:inline; background-color:#f0f0f0;}
+#select_btn ul{ margin:0px; padding:0px; list-style:none;}
+#select_btn li{padding:2px 5px; width:160px; height:63px; border-top:1px solid #fff; cursor:pointer;}
+#select_btn li:hover{background-color:#fff;}
+#select_btn li.current{background-color:#fff;}
+#select_btn li.current:hover{background-color:#fff;}
+#select_btn a{color:#000;}
+#select_btn img{padding:2px; border:1px solid #ccc; width:70px; height:49px; margin-right:10px; float:left;}
+#select_btn .select_text{font:bold 13px/16px 'Microsoft YaHei'; overflow:hidden; display:block;}
+#select_btn .select_text:hover{text-decoration:underline;}
+/**gundong end**/
+
+.top_right{width:235px; height:270px;  padding-left:5px; float:left; overflow:hidden;}
+/**mil**/
+#mil{width:960px; height:auto; margin:0 auto;overflow:hidden; padding-top:10px;}
+.mil_left{height:auto; width:195px; float:left; float:left;}
+.mil_one{height:250px; width:195px; padding:0px; margin:0px 0px 10px; list-style:none; overflow:hidden;}
+.tip{height:65px; width:195px; margin:0px; padding:0px; overflow:hidden; font-size:18px;}
+.cont{height:75px; width:195px; margin:0px; padding:0px;}
+.pic{height:120px; width:195px; overflow:hidden;}
+
+#mil_mi{height:auto; width:390px; float:left; margin-left:15px;}
+.mil_pic{ height:420px; width:390px;}
+.mil_list{width:390px; height:auto;}
+.mil_list dl{ height:112px; width:390px; margin:10px auto 0 auto;}
+.mil_list dl dd{height:112px; width:175px; float:left; margin:0px;}
+.mil_list dl dt{height:110px; width:215px;float:left; line-height:18px; border-top:#999 2px solid; overflow:hidden;}
+
+#mil_right{height:auto; width:345px; background:#F0F0F0; float:left; margin-left:15px;}
+.mil_t{height:875px; width:345px;}
+.title1{height:47px; width:345px; line-height:48px; background:#999; border-top:#333 2px solid;font-size:18px;}
+.mil_t dl{height:95px; width:340px; overflow:hidden; border-top:#FFF 1px solid; margin: 6px 5px;}
+.mil_t dl dd{height:95px; width:110px;margin:0px; float:left;}
+.mil_t dl dd img{border:none;}
+.mil_t dl dt{height:95px; width:225px; overflow:hidden; float:left; padding-left:5px;}
+.mil_t dl dt h3{margin:9px 0px;}
+
+.mil_b{height:155px; width:345px; padding:0px; margin:0px;}
+
+/*project start*/
+#project{ width:960px;  height:auto; margin:0 auto; overflow:hidden;}
+.biaoti{height:46px;width:955px;line-height:47px;font-size:18px; background:#999; 
+	    border-top:#333 2px solid; border-bottom:#CCC 1px solid;  padding-left:5px;
+	    margin-top:0px;}
+
+.project_left{background:#F0F0F0;width:285px; float:left; overflow:hidden;}
+.name1{width:285px; height:39px; font-size:16px;overflow:hidden;}
+.project_left dl{width:285px; height:80px; margin:12px 0px 15px 0px;}
+.project_left dl dd{margin:0px; float:left; width:110px; height:80px;}
+.project_left dl dt{float:left; width:170px; height:78px; overflow:hidden; padding:0px 0px 0px 5px;}
+
+.project_mil{ width:350px; height:293px; float:left; margin:0px 12px; }
+
+.project_right{width:300px;float:left; background:#F0F0F0;}
+.two{height:70px; width:300px; margin:20px 0px; padding:0px;}
+.two dd{ height:70px; width:100px; margin:0px; padding:0px; float:left; overflow:hidden;}
+.two dt{ height:60px; width:190px; margin:0px; padding-left:10px; float:left; overflow:hidden;}
+
+/**henglie**/
+#henglie{ width:960px; height:auto; margin:0 auto; overflow:hidden;}
+#henglie dl{ width:320px; height:100px; float:left; margin:5px 0px;}
+#henglie dl dd{width:100px; height:100px; margin:0px; padding:0px; overflow:hidden; float:left;}
+#henglie dl dt{width:210px; height:100px; margin-left:10px;float:left; overflow:hidden;}
+#henglie a{color:#666;text-decoration:none;}
+#henglie a:hover{color:#09F;text-decoration:none;}
+/**ad**/
+#ad{width:960px; margin:0 auto;height: 210px;}
+.show{height: 46px;font-size: 18px;width: 955px;background: #999;border-top: #333 2px solid;border-bottom: #CCC 1px solid;line-height: 47px;padding-left: 0px;margin: 5px 0px;;}
+.no_one{padding:0px; height:150px; width:150px; overflow:hidden; float:left;}
+#ad ul{margin:0px;}
+#ad li{height:150px; width:150px; float:left;padding:0px 0px 0px 11px; margin:0px; overflow:hidden;}
+
+/**zuixia**/
+#zuixia{ height:227px; width:960px; margin:0 auto;clear:both; padding-top:5px;}
+.tulie{height:215px; width:180px; float:left; overflow:hidden; list-style:none; padding:0px; margin-left:15px;margin-top: 0px;}
+.tulie1{height:215px; width:180px; float:left; overflow:hidden;list-style:none; padding:0px; margin:0; }
+.timu{height:30px; width:180px; border-top:#333 2px solid; font-size:16px; line-height:30px;overflow: hidden;}
+.tupian{ height:130px; width:180px; overflow:hidden;}
+.tupian img{ border:none;}
+.neirong{height:47px; width:180px; overflow: hidden;}
+/**bottom**/
+
+#footerbg{ width:100%;height:120px; background:#1c779d; margin:0 auto; overflow:hidden;}
+
+
+

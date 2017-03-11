@@ -1,0 +1,144 @@
+/*本网站由web前端开发者(薛洪刚)开发;IT昵称(小贱);QQ(1399395438)*/
+/** document css**/
+body{ font-family:Constantia,Arial; font-size:14px; color:#666; margin:0 auto;}
+ul li h1 h2 h3 h4{list-style:none; magin:0px; padding:opx; border:0px;}
+img{border:0px;}
+h4{font-size:24px;}
+h5{font-size:20px;}
+a:link{ color:#000;text-decoration:none;}
+a:hover{color:#000;text-decoration:none;}
+/*a:visited{ color:#666;text-decoration:none;}*/
+.wrapper{ width:960px; height:40px; margin:0 auto;}
+/**body css开始**/
+/**banner 开始**/
+.gg_full {POSITION: relative; MARGIN: 0px auto; WIDTH: 960px;background:#e8e8e8; background:url(../../../simpleboot/Public/images/banner.jpg);}
+.gg_full .gg_fbtn {POSITION: absolute; WIDTH: 19px; DISPLAY: none; HEIGHT: 55px; TOP: 10px; right: -23px}
+.gg_full .gg_fbtn A {DISPLAY: block; background:url(../../../simpleboot/Public/images/gg_btn.png) no-repeat 0px 0px; HEIGHT: 55px; OVERFLOW: hidden}
+.gg_full .gg_fbtn .gg_fclose {background:url(../../../simpleboot/Public/images/gg_btn.png) no-repeat -19px 0px}
+.gg_full .gg_fcon {DISPLAY: none; HEIGHT: 65px;}
+/**banner 结束**/
+/**nav css开始**/
+#nav{ height:40px; width:100%; background:#487d9c}
+.nav_bg{height:40px;padding:0px;float:left; overflow:hidden;}
+.nav_bg ul{height:40px; margin:0px; padding:0px; overflow:hidden;}
+.nav_bg li{ height:40px; line-height:40px; margin:0px; font-weight; color:#FFF;padding:0 10px; float:left; list-style:none; font-size:20px;}
+.nav_bg li:hover{background:#4290be;}
+/* LEVEL ONE*/
+#page_wrap{width:360px; height:40px; float:left;}
+ul.dropdown{ width:108px; height:40px; float:right; margin:0px; }
+ul.dropdown li { font-weight: bold; float: left; width: 108px; position: relative; top:0; right:0;list-style:none; margin:0px; padding:0px;}
+ul.dropdown a:hover{ color: #000; }
+ul.dropdown li a { display: block; padding: 10px 8px; color: #222; position: relative; z-index: 2000; }
+ul.dropdown li a.hover { background: #F3D673; position: relative; }
+/* LEVEL TWO*/
+ul.dropdown ul { display: none; position: absolute; top:0; left:0; width: 180px; z-index: 1000; }
+ul.dropdown ul li { font-weight: normal; background: #f6f6f6; color: #000; border-bottom: 1px solid #ccc; }
+ul.dropdown ul li a{ display: block; background: #eee !important; } 
+ul.dropdown ul li a:hover{ display: block; background: #F3D673 !important; } 
+/**nav css结束**/
+/**news开始**/
+#news_bg{ width:960px;margin:0 auto; padding-top:5px;}
+.focus{ width:560px; float:left;}
+.pic{width:560px; height:330px; overflow:hidden; margin:0px; padding:0px;}
+.focus ul{padding:5px 0px; margin:0px;}
+.focus li{list-style:none;}
+.title{height:50px; font-size:20px; overflow:hidden; line-height:24px; padding:0px; margin:0px;}
+.cont{ height:50px; overflow:hidden;}
+
+.news_pic{width:390px; float:left; padding-left:10px;}
+.list_pic{width:390px;padding:0px; margin:0px;}
+.list_pic{width:390px; height:100px; border-bottom:#CCC 1px solid; }
+.list_pic dd{width:130px; height:90px; overflow:hidden; margin:0px; float:left;}
+.list_pic dt{ height:90px; width:255px; float:left; font-size:18px; padding-left:5px; overflow:hidden; }
+.list_pic dt:hover{background:#c3a473;}
+
+.list_pic1{width:390px; height:600px; padding:0px; margin:9px 0px;;}
+.list_pic1{width:390px; height:100px; border-bottom:#CCC 1px solid; }
+.list_pic1 dd{width:130px; height:90px; overflow:hidden; margin:0px; float:left;}
+.list_pic1 dt{ height:90px; width:255px; float:left; font-size:20px; padding-left:5px; margin:0px; overflow:hidden; }
+.list_pic1 dt:hover{background:#c3a473;}
+/**nws 结束**/
+.bannerbg{width:960px; margin:0 auto; overflow:hidden; padding:5px 0px;}
+/**min1开始**/
+/**colums1**/
+#min1{ width:960px; height:770px; margin:0 auto;overflow:hidden;}
+#colums1{width:600px;float:left;}
+.colums1_tl{ height:25px; padding:0px; margin:0 5px; border-bottom:#CCC 1px solid; margin-top:5px;}
+.colums1_tl p{ padding-top:3px; font-size:20px; margin:0px;}
+
+.colums1_left{width:370px; float:left; padding-right:10px; margin:5px 0px;}
+.colums1_timu{ padding:5px 0px; margin:0px; border-bottom:#CCC 1px solid;}
+.colums1_timu p{padding:0px; font-size:18px; margin:0px; max-height:50px; overflow:hidden;}
+.colums1_pic{width:370px; height:180px; overflow:hidden;}
+.colums1_cont{width:370; max-height:50px; overflow:hidden;}
+.colums1_list{height:135px; width:370px; margin:8px 0px;}
+.colums1_list dd{ height:130px; width:190px; margin:0px; overflow:hidden; float:left;}
+.colums1_list dt{ height:130px; width:170px; overflow:hidden; float:left; padding-left:10px; font-size:21px;}
+
+.colums1_right{ width:200px; height:500px; margin:5px 10px 0px; padding:0px;float:left;}
+.colums1_right ul{ margin:0px; padding:0px;}
+.colums1_right li{ height:70px; width:200px; overflow:hidden; list-style:none; padding:0px; margin:0px; font-size:18px; border-bottom:#CCC 1px solid;}
+.colums1_right .one{ height:69px; width:200px; overflow:hidden; list-style:none; padding:0px; margin:0px; font-size:18px;}
+/**colums2**/
+#columns2 {width:150px; float:left; background:#6697CC;}
+#columns2 dl{padding:0 8px; width:125px; height:175px; margin:3px 0px 11px;}
+#columns2 dl dt{border: #CCC 1px solid; height:100px; width:130px; margin:0px; padding:0px;}
+#columns2 dl dd{height:75px; width:130px;margin:0px; padding:0px;font-size:16px; overflow:hidden;}
+/*column3*/
+#column3{width:210px; float:left; margin-bottom:20px;}
+.column1_left { width:205px; margin:0 auto; text-align:center; border:1px solid #CCC; padding:2px }
+.container { width:205px; height:200px; overflow:hidden; position:relative; background:#000 }
+.slider li { list-style:none; display:inline; }
+.slider img { width:200px; height:200px; display:block; border:0; }
+.slider2 li { float:left; position:relative }
+.num { position:absolute; right:100px; bottom:4px; height:20px; _bottom:1px; }
+.num li { float: left; width:21px; height:20px; background:url(../../../simpleboot/Public/style/images/ink0721hui.png) no-repeat center center; _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/ink0721hui.png', sizingMethod='crop');
+cursor: pointer; overflow: hidden; }
+.num li.on { background:url(../../../simpleboot/Public/images/ink0721hui1.png) no-repeat center center; _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/ink0721hui1.png', sizingMethod='crop');
+width:21px; height:20px; }
+.idSiideer_pos{height:27px; line-height:27px; color:#FFF;position:absolute; left:0px; bottom:0px; width:321px; z-index:10; text-align:center;}
+.idSiideer_pos2{height:27px; background:#000; position:absolute; left:0px; bottom:0px; width:321px;filter:alpha(opacity=50);opacity:0.5;}
+
+.column1_right{ width:207px; height:450px;overflow:hidden; padding:10px 0 10px 3px; overflow:hidden;}
+.column1_ml{ width:207px; height:70px;overflow:hidden; padding-left:3px; overflow:hidden;}
+/**min1结束**/
+/**cut开始**/
+#cut{width:889px; height:166px; padding:20px 20px 20px 47px;margin:0 auto; background:#CCC; border:#999 2px solid; overflow:hidden;}
+.pic_new img{width:200px; height:166px; overflow:hidden;margin-right:17px; float:left; border:1px #666666 solid;}
+/**cut结束**/
+/**min2开始**/
+#min2{width:960px; height:377px; margin:0 auto; margin-top:5px; overflow:hidden;}
+#colums2_left{width:570px; height:375px; border-bottom:2px #999999 solid;float:left;}
+.colums2_name{height:20px; width:560px; border-bottom:2px #999999 solid; padding:10px 5px;}
+.colums2_name p{font-size:20px; margin:0px; width:100px;}
+
+#colums2_left ul{height:330px; width:260px; float:left; margin:0px; padding:0px; list-style:none; padding-top:5px;}
+#colums2_left ul .tupian{ height:260px; width:260px; padding:0px; margin:0px; overflow:hidden;}
+#colums2_left ul .top{height:50px; width:260px; padding:10px 0px; margin:0px; font-size:18px; overflow:hidden;}
+
+.column1_list{ height:335px; width:300px; margin-left:10px; float:left;}
+.column1_list dl{ height:70px; width:300px; margin:5px 0 10px 0px;;}
+.column1_list dd{height:70px; width:100px; overflow:0px; margin:0px; float:left;}
+.column1_list dt{height:70px; width:195px;float:left; overflow:hidden; margin-left:5px;}
+
+#colums2_right{height:377px; width:380px; margin:0px; padding:0px; float:left; overflow:hidden; margin-left:10px;}
+.colums2_titl{height:20px; width:390px; border-bottom:2px #999999 solid; padding:10px 5px;}
+.colums2_titl p{font-size:20px; margin:0px; width:100px;}
+#colums2_right ul{list-style:none; margin-top:5px; padding:0px;}
+#colums2_right li{height:45px; width:380px; overflow:hidden; font-size:16px}
+/**min2结束**/
+/**min3开始**/
+#min3{width:960px; height:320px; margin:0 auto; padding:0px;}
+#min3_left{height:320px;float:left;overflow: hidden;}
+.colums3_name{height:20px; width:690px; border-bottom:2px #999999 solid; padding:10px 5px;}
+.colums3_name p{font-size:20px; margin:0px; width:100px;}
+#min3_left ul{margin:0px; padding:0px; list-style:none;}
+#min3_left li{ margin:1px;padding:1px; height:154px; width:154px; border:1px #CCCCCC solid; float:left;}
+#min3_right{height:384px; width:250px;float:left; margin-left:10px; padding:0px;}
+#min3_right .gg1{width:250px; height:270px; overflow:hidden; margin-bottom:10px; padding:0px;}
+#min3_right .gg2{height:104px; white:250px; overflow:hidden; margin:0px; padding:0px;}
+/**min3 结束**/
+#gugu{width:960px; margin:0px auto; padding:8px 0px; }
+
+/**body css结束**/
+.lunbo{ width:210px; height:747px; overflow:hidden}

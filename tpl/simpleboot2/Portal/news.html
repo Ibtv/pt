@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
+	<title>{$site_name}</title>
+    <meta http-equiv="Content-Language" content="pt_PT">
+    <meta name="author" content="Powerless"> 
+    <meta name="Copyright" content="{$site_seo_title}">
+	<meta name="keywords" content="{$site_seo_keywords}" />
+	<meta name="description" content="{$site_seo_description}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+<link rel="icon" href="__TMPL__Public/images/favicon.ico" type="image/ico">
+<link href="__TMPL__Public/style/base.css" rel="stylesheet" type="text/css">
+<link href="__TMPL__Public/style/news.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="__TMPL__Public/js/jquery.js"></script>
+<script type="text/javascript">
+var pageid = 4;
+
+        function nofind(){
+        var img=event.srcElement;
+        img.src="__TMPL__Public/images/no-img.jpg";
+        img.onerror=null; 
+        }
+        </script>
+</head>
+<body>
+<!-- header nav start-->
+<div id="header_navbg">
+		<div class="navbg">
+			<ul>
+				<li class="wuborder"><a href="{:u('list/index',array('id'=>111))}">China</a></li>
+       	   	   <li><a href="{:u('list/index',array('id'=>112))}">Brasil</a></li>
+       	   	   <li><a href="{:u('list/index',array('id'=>113))}">Ásia</a></li>
+       	   	   <li><a href="{:u('list/index',array('id'=>114))}">Países lusófonos</a></li>
+       	   	   <li><a href="{:u('list/index',array('id'=>115))}">Internacional</a></li>
+			</ul>
+			</ul>
+		</div>
+</div>
+<!-- header nav end-->
+<!--js xiaoguo start-->
+<div id="jsxiaoguobg">
+	<div class="leftjsbg">
+	    <div class="slide" id="PicSlide">
+			<ul class="img">
+            <php>
+            $news_all=sp_sql_posts('cid:111,112,113,114,115;field:tid,post_title,smeta;limit:5;order:post_date desc');
+            </php>
+            <foreach name="news_all" item="all">
+            <php>
+            $smeta=json_decode($all['smeta'],true);
+            </php>
+            <li <php> if($a==1){echo "style='display: list-item;'";}else echo "class='hidden' style='display: none;'";</php>>
+				<a href="{:U('article/index',array('id'=>$all['tid']))}" title="{$all.post_title}">
+				<img onerror="nofind();" src="{$site_host}data/upload/{$smeta.thumb}" width="640" height="360" alt="{$all.post_title}" data-pinit="registered"></a>
+            </li>
+            </foreach>
+			</ul>
+			<!-- 标题区 -->
+			<div class="title">
+				<p class="h3 pos-a"><a title href="#"></a></p>
+				<div class="shadow">
+				</div>
+			</div>
+			<!-- 缩略图 -->
+			<div class="thumb">
+				<ul>
+                
+            <php>
+            $newd_all=sp_sql_posts('cid:111,112,113,114,115;field:tid,post_title,smeta;limit:5;order:post_date desc');
+            </php>
+            <foreach name="newd_all" item="all">
+            <php>
+            $smeta=json_decode($all['smeta'],true);
+            </php>
+					<li>
+					<a href="{:U('article/index',array('id'=>$all['tid']))}" title="{$all.post_title}">
+					<img onerror="nofind();" src="{$site_host}data/upload/{$smeta.thumb}" width="120" height="60" alt="{$all.post_title}"></a></li>
+            </foreach>
+				</ul>
+				<div class="now-status" style="left: 0px;">
+				</div>
+			</div>
+		</div>
+		<!-- @end Banner -->
+		<script type="text/javascript" src="__TMPL__Public/js/zzsc.js"></script>
+		<script type="text/javascript">
+		    $(document).ready(function(){
+		        //幻灯片调用
+		        slider.init({'id': $('#PicSlide'), way:'left', interval: 4000});
+		    });
+		</script>
+	</div>
+    <div class="right_hotnewsbg">
+            <php>
+            $zg_all=sp_sql_posts('cid:111;field:tid,post_title,smeta;limit:4;order:post_date desc');
+            </php>
+            <foreach name="zg_all" item="all">
+            <php>
+            $smeta=json_decode($all['smeta'],true);
+            </php>
+            <dl>
+                <dt><img onerror="nofind();" src="{$site_host}data/upload/{$smeta.thumb}" width="110" height="90" /></dt>
+                <dd><a href="{:U('article/index',array('id'=>$all['tid']))}">{$all.post_title}</a></dd>
+            </dl>
+            </foreach>
+	</div>
+</div>
+<!--js xiaoguo end-->
+<!-- main start-->
+<div class="wrapper">
+	<div id="leftnewsbg">
+	      <div class="subnavbg"><h2><a href="{:u('list/index',array('id'=>112))}">Brasil</a></h2></div>
+            <php>
+            $mg_all=sp_sql_posts('cid:112;field:tid,post_title,post_excerpt,smeta;limit:6;order:post_date desc');
+            </php>
+            <foreach name="mg_all" item="all">
+            <php>
+            $smeta=json_decode($all['smeta'],true);
+            </php>
+	      	   <dl class="leftnews">
+	      	   	   <dt><a href="{:U('article/index',array('id'=>$all['tid']))}">
+                   <img onerror="nofind();" src="{$site_host}data/upload/{$smeta.thumb}" width="280" height="140" />
+                   </a></dt>
+	      	   	   <dd> 
+                     <h1><a href="{:U('article/index',array('id'=>$all['tid']))}">{$all.post_title}</a></h1>
+                     <h4><a href="{:U('article/index',array('id'=>$all['tid']))}">{$all.post_excerpt}</a></h4>
+	      	   	   </dd>
+	      	   </dl>
+            </foreach>
+    </div>
+    <div class="righthotnewsbg">
+	    <div class="rightnavbg"><h2><a href="{:u('list/index',array('id'=>115))}">Internacional</a></h2></div>
+	    <ul class="rightbannerbg">
+            <php>
+            $oz_all=sp_sql_posts('cid:115;field:tid,smeta;limit:4;order:post_date desc');
+            </php>
+            <foreach name="oz_all" item="all">
+            <php>
+            $smeta=json_decode($all['smeta'],true);
+            </php>
+	    	<li><a href="{:U('article/index',array('id'=>$all['tid']))}">
+            <img onerror="nofind();" src="{$site_host}data/upload/{$smeta.thumb}" width="170" height="170" />
+            </a></li>
+            </foreach>
+	    </ul>
+	   <div class="twonavbg"><h2><a href="{:u('list/index',array('id'=>114))}">Países lusófonos</a></h2></div>
+            <php>
+            $lm_all=sp_sql_posts('cid:114;field:tid,post_excerpt,smeta;limit:2;order:post_date desc');
+            </php>
+            <foreach name="lm_all" item="all">
+            <php>
+            $smeta=json_decode($all['smeta'],true);
+            </php>
+           <dl class="hotnewsbg">
+                 <dt><a href="{:U('article/index',array('id'=>$all['tid']))}">{$all.post_excerpt}</a></dt>
+                 <dd><a href="{:U('article/index',array('id'=>$all['tid']))}">
+                 <img onerror="nofind();" src="{$site_host}data/upload/{$smeta.thumb}" width="350" height="190" />
+                 </a></dd>
+           </dl>
+            </foreach>
+            
+
+	   
+	</div>       
+</div>
+<!--main end-->
+<!--content start-->
+<div id="contentbg">
+	<div class="sidenavbg"><h2><a href="{:u('list/index',array('id'=>113))}">Ásia</a></h2></div> 
+	<div class="listnewsbg">
+          <php>
+            $fz_all=sp_sql_posts('cid:113;field:tid,post_title,smeta;limit:10;order:post_date desc');
+            </php>
+            <foreach name="fz_all" item="all">
+            <php>
+            $smeta=json_decode($all['smeta'],true);
+            </php>
+		<dl>
+			<dt><a href="{:U('article/index',array('id'=>$all['tid']))}">
+            <img onerror="nofind();" src="{$site_host}data/upload/{$smeta.thumb}" width="180" height="190" /></a></dt>
+			<dd><a href="{:U('article/index',array('id'=>$all['tid']))}">{$all.post_title}</a></dd>
+		</dl>
+			</foreach>
+</div>
+<!--content end-->
+		<include file="Public:footer" />
+</body>
+</html>
